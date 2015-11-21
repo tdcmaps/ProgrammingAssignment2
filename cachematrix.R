@@ -1,8 +1,10 @@
 ## makeCacheMatrix takes an input matrix (that must be invertible) and returns a matrix that will cache a copy of its inverse and return the cached copy
 ## on subsequent calls to the function cacheSolve. makeCacheMatrix returns a list, and this list in the input to cacheSolve. 
 ## the matrix inverse is computed by cacheSolve, if necessary. makeCacheMatrix provides the mechanism to avoid re-computing the same inverse result.
-## I tested these functions with a variety of square matrices created by using runif() to generate random numbers. In all cases that I tests (up to 200 x 200 matrix), inverting the matrix took very little time. So I assume the matrix must be very large if computing the inverse will be time consuming.
-## functions do
+## I tested these functions with a variety of square matrices created by using runif() to generate random numbers. 
+## In all cases that I tested (up to 200 x 200 matrix), inverting the matrix took very little time. 
+## So I assume the matrix must be very large if computing the inverse will be time consuming.
+## the <<- assignment stores the matrix inverse in an environment (probably global) that persists after the function call
 
 
 makeCacheMatrix <- function(x = matrix()) {
